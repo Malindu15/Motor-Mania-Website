@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Vehicles | Motor Mania</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .filter-header {
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            align-items: end;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .pagination button {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .pagination button.active {
+            background: var(--accent-color);
+            color: #0f172a;
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="glass">
+        <nav>
+            <a href="index.html" class="logo">Motor<span style="color:var(--accent-color)">Mania</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="buy.html" class="active">Buy</a>
+                <a href="sell.html">Sell</a>
+            </div>
+            <a href="buy.html" class="btn">Browse Cars</a>
+        </nav>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-header glass">
+        <div class="form-group">
+            <label>Keyword</label>
+            <input type="text" id="filter-keyword" placeholder="e.g. Civic, Premio">
+        </div>
+        <div class="form-group">
+            <label>Transmission</label>
+            <select id="filter-type">
+                <option value="">All Types</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+                <option value="Tiptronic">Tiptronic</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <select id="filter-category">
+                <option value="">All Categories</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Bike">Bike</option>
+                <option value="Van">Van</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn" style="width: 100%;" onclick="applyFilters()">Apply Filters</button>
+        </div>
+    </div>
+
+    <!-- Vehicles Grid -->
+    <section class="listings">
+        <div id="listings-grid" class="listing-grid">
+            <!-- Items injected by JS -->
+        </div>
+
+        <div class="pagination">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next &raquo;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Motor Mania. Premium Auto Trading.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

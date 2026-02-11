@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Details | Motor Mania</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="details-page">
+
+    <header class="glass">
+        <nav>
+            <a href="index.html" class="logo">Motor<span style="color:var(--accent-color)">Mania</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="buy.html">Buy</a>
+                <a href="sell.html">Sell</a>
+            </div>
+            <a href="buy.html" class="btn">Browse Cars</a>
+        </nav>
+
+    </header>
+
+    <div class="details-container glass">
+        <!-- Image Section -->
+        <div class="details-img">
+            <img id="detail-img" src="" alt="Vehicle Image">
+            <div class="thumbnails" style="display: flex; gap: 10px; margin-top: 10px;">
+                <!-- Mock Thumbnails -->
+                <div style="flex: 1; height: 60px; background: #334; border-radius: 8px;"></div>
+                <div style="flex: 1; height: 60px; background: #334; border-radius: 8px;"></div>
+                <div style="flex: 1; height: 60px; background: #334; border-radius: 8px;"></div>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="details-info">
+            <h1 id="detail-title">Loading...</h1>
+            <p class="details-price" id="detail-price">--- LKR</p>
+
+            <div class="details-specs">
+                <div class="spec-item"><i class="ph ph-calendar-blank"></i> <span id="detail-year">---</span></div>
+                <div class="spec-item"><i class="ph ph-gauge"></i> <span id="detail-mileage">--- km</span></div>
+                <div class="spec-item"><i class="ph ph-gas-pump"></i> <span id="detail-fuel">---</span></div>
+                <div class="spec-item"><i class="ph ph-gear"></i> <span id="detail-transmission">---</span></div>
+            </div>
+
+            <h3>Description</h3>
+            <p id="detail-desc" style="color: var(--text-secondary); margin-bottom: 20px;">
+                Loading description...
+            </p>
+
+            <h3>Seller Details</h3>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; margin-top: 10px;">
+                <p style="font-weight: 600; font-size: 1.1rem;">Mr. Perera</p>
+                <p style="color: var(--accent-color); font-size: 1.2rem; font-weight: 700;">077 123 4567</p>
+                <button class="btn" style="width: 100%; margin-top: 10px;">Call Seller</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Motor Mania. Premium Auto Trading.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline init logic to ensure it runs
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            if (id) loadDetails(id);
+        });
+    </script>
+</body>
+
+</html>

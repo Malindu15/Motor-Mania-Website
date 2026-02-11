@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Mania | Premium Auto Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="glass">
+        <nav>
+            <a href="index.html" class="logo">Motor<span style="color:var(--accent-color)">Mania</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="buy.html">Buy</a>
+                <a href="sell.html">Sell</a>
+            </div>
+            <a href="buy.html" class="btn">Browse Cars</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your <br><span>Dream Ride</span> Today</h1>
+            <p>The most premium marketplace for buying and selling vehicles in Sri Lanka. Experience the future of auto trading.</p>
+            
+            <div class="search-bar glass">
+                <i class="ph ph-magnifying-glass" style="font-size: 1.5rem; color: var(--text-secondary); align-self: center;"></i>
+                <input type="text" id="hero-search" placeholder="Search by make, model, or keyword...">
+                <button class="btn" onclick="handleSearch()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="category-grid">
+            <div class="category-card glass" onclick="filterCategory('SUV')">
+                <i class="ph ph-jeep category-icon"></i>
+                <h3>SUVs</h3>
+            </div>
+            <div class="category-card glass" onclick="filterCategory('Sedan')">
+                <i class="ph ph-car-profile category-icon"></i>
+                <h3>Sedans</h3>
+            </div>
+            <div class="category-card glass" onclick="filterCategory('Sport')">
+                <i class="ph ph-steering-wheel category-icon"></i>
+                <h3>Sports</h3>
+            </div>
+            <div class="category-card glass" onclick="filterCategory('Bike')">
+                <i class="ph ph-motorcycle category-icon"></i>
+                <h3>Motorbikes</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Listings -->
+    <section class="listings">
+        <h2 class="section-title">Latest Arrivals</h2>
+        <div id="featured-grid" class="listing-grid">
+            <!-- Items injected by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="buy.html" class="btn btn-secondary">View All Vehicles</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Motor Mania. Handcrafted for Sri Lanka.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
